@@ -42,9 +42,14 @@ where $M$ is the body mass inertia matrix, $\mu$ is the hydrodynamic added mass 
 $\sum{F}$ is the sum of all forces applied to the body, and $\ddot{\bf x}$ is the resulting acceleration, with:
 
 $$
-    {\bf{x}}^T =
+    \bf{x} =
     \begin{bmatrix}
-      x & y & z & p & q &r 
+      x \\\ 
+      y \\\ 
+      z \\\ 
+      p \\\
+      q \\\
+      r 
     \end{bmatrix}
 $$
 where,
