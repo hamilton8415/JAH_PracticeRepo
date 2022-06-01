@@ -53,12 +53,13 @@ where,
 
 * $x$ : Position in X axis
 * $y$ : Position in Y axis
-* $z$ : Position in Z axis * $p$ : Rotation about X axis
+* $z$ : Position in Z axis 
+* $p$ : Rotation about X axis
 * $q$ : Rotation about Y axis
 * $q$ : Rotation about Z axis
 > Note that the p-q-r notation is used for rotation, for this is common in maritime literature and cooresponds to roll-pitch-yaw.
 
-> Note also that DART stores the state vector with the rotational modes first ${\bf{x}}^T = [p & q & r & x & y & z], and re-orients the interia matrix accordingly, for this document the more usual ordering with translational modes first in the state vector is used.  
+> Note also that DART stores the state vector with the rotational modes first ${\bf x}^T = [p & q & r & x & y & z]$, and re-orients the interia matrix accordingly, for this document the more usual ordering with translational modes first in the state vector is used.  
 
 &nbsp;
 
