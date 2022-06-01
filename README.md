@@ -75,8 +75,8 @@ $$
       0           & m           & 0           & -m z_{CoM} & 0           &  m x_{CoM} \\\
       0           & 0           & m           &  m y_{CoM} & -m x_{CoM} & 0           \\\
       0           & -m z_{CoM} &  m y_{CoM} & I_{xx}     & I_{xy}     & I_{xz}     \\\
-       m z_{CoM} & 0           & -m x_{CoM} & I_{xy}     & I_{yy}     & I_{yz}     \\\
-      -m y_{CoM} &  mx_{CoM}  & 0           & I_{xz}     & I_{yz}     & I_{zz}
+       m z_{CoM} & 0           & -m x_{CoM} & I_{yx}     & I_{yy}     & I_{yz}     \\\
+      -m y_{CoM} &  mx_{CoM}  & 0           & I_{zx}     & I_{zy}     & I_{zz}
     \end{bmatrix}
 $$
 
@@ -85,19 +85,19 @@ where
 * $I_{xx}$ : Principal mass moment of inertia about the X axis
 * $I_{yy}$ : Principal mass moment of inertia about the Y axis
 * $I_{zz}$ : Principal mass moment of inertia about the Z axis
-* $I_{xy}$ : Product mass moment of inertia about the X and Y axes
-* $I_{xz}$ : Product mass moment of inertia about the X and Z axes
-* $I_{yz}$ : Product mass moment of inertia about the Y and Z axes
+* $I_{xy} = I_{yx}$ : Product mass moment of inertia about the X and Y axes, and vice-versa
+* $I_{xz} = I_{zx}$ : Product mass moment of inertia about the X and Z axes, and vice-versa
+* $I_{yz} = I_{zy}$ : Product mass moment of inertia about the Y and Z axes, and vice-versa
 * $x_{CoM}$ : Center of mass X coordinate
 * $y_{CoM}$ : Center of mass Y coordinate
 * $z_{CoM}$ : Center of mass Z coordinate
 
-$M$ is sufficient to represent the body's inertia when the density of the surrounding fluid is much less than the density of the body, and this matrix is formed by sdf descriptions of $m$, $(x_{CoM},y_{CoM},z_{CoM})$, and the moment of inertial matrix $\bf I$, and so no access is given to the individiual components of $M$.
+$M$ is sufficient to represent the body's inertia when the density of the surrounding fluid is much less than the density of the body, and this matrix is formed by sdf descriptions of $m$, $(x_{CoM},y_{CoM},z_{CoM})$, and the moment of inertial matrix $\bf I$, and so no access is given to the individiual components of $\bf M$.
 
-When the density of the surrounding fluid is not negligible compared to the density of the body, the added mass matrix $\mu$ must be included for accurate simulations.  This situation commonly arises for submerged and floating bodies which have average densities comparable to the density of water, or very lightweight objects such as ballons in air.  In this case, $\bf{\mu}$ is symmetric and contains 21 unique values in the most general case. The off-diagonal terms result physically from the situation in which acceleration of the body in one direction results in an acceleration of the surrounding fluid in a different direction.  [2]
+When the density of the surrounding fluid is not negligible compared to the density of the body, the added mass matrix $\bf{\mu}$ must be included for accurate simulations.  This situation commonly arises for submerged and floating bodies which have average densities comparable to the density of water, or very lightweight objects such as ballons in air.  In this case, $\bf{\mu}$ is symmetric and contains 21 unique values in the most general case. The off-diagonal terms result physically from the situation in which acceleration of the body in one direction results in an acceleration of the surrounding fluid in a different direction.  [2]
 
 $$
-    \mu 
+    \bf{\mu}
     =
     \begin{bmatrix}
       \mu_{11} & \mu_{12} & \mu_{13} & \mu_{14} & \mu_{15} & \mu_{16} \\\
