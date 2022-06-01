@@ -42,7 +42,7 @@ where $M$ is the body mass inertia matrix, $\mu$ is the hydrodynamic added mass 
 $\sum{F}$ is the sum of all forces applied to the body, and $\ddot{\bf x}$ is the resulting acceleration, with:
 
 $$
-    {\bf x}^T =
+    {\bf{x}}^T =
     \begin{bmatrix}
       x & y & z & p & q &r 
     \end{bmatrix}
@@ -51,13 +51,12 @@ where,
 
 * $x$ : Position in X axis
 * $y$ : Position in Y axis
-* $z$ : Position in Z axis
-* $p$ : Rotation about X axis
+* $z$ : Position in Z axis * $p$ : Rotation about X axis
 * $q$ : Rotation about Y axis
 * $q$ : Rotation about Z axis
 > Note that the p-q-r notation is used for rotation, for this is common in maritime literature and cooresponds to roll-pitch-yaw.
 
-> Note also that DART stores the state vector with the rotational modes first ${\bf x}^T = [p & q & r & x & y & z], and re-orients the interia matrix accordingly, for this document the more usual ordering with translational modes first in the state vector is used.  
+> Note also that DART stores the state vector with the rotational modes first ${\bf{x}}^T = [p & q & r & x & y & z], and re-orients the interia matrix accordingly, for this document the more usual ordering with translational modes first in the state vector is used.  
 
 &nbsp;
 
@@ -121,29 +120,29 @@ where
 * $\mu_{24}$ : added mass in the Y axis due to angular acceleration about the X direction
 * $\mu_{25}$ : added mass in the Y axis due to angular acceleration about the X direction
 * $\mu_{26}$ : added mass in the Y axis due to angular acceleration about the X direction
-* $\mu_{31} == \mu_{13}$ : added mass in the Z axis due to linear acceleration in the X direction, and vice-versa
-* $\mu_{32} == \mu_{23}$ : added mass in the Z axis due to linear acceleration in the Y direction, and vice-versa
+* $\mu_{31} = \mu_{13}$ : added mass in the Z axis due to linear acceleration in the X direction, and vice-versa
+* $\mu_{32} = \mu_{23}$ : added mass in the Z axis due to linear acceleration in the Y direction, and vice-versa
 * $\mu_{33}$ : added mass in the Z axis due to linear acceleration in the Z direction
 * $\mu_{34}$ : added mass in the Z axis due to angular acceleration about the X direction
 * $\mu_{35}$ : added mass in the Z axis due to angular acceleration about the X direction
 * $\mu_{36}$ : added mass in the Z axis due to angular acceleration about the X direction
-* $\mu_{41} == \mu_{14}$ : added mass moment about the X axis due to linear acceleration in the X direction, and vice-versa
-* $\mu_{42} == \mu_{24}$ : added mass moment about the X axis due to linear acceleration in the Y direction, and vice-versa
-* $\mu_{43} == \mu_{34}$ : added mass moment about the X axis due to linear acceleration in the Z direction
+* $\mu_{41} = \mu_{14}$ : added mass moment about the X axis due to linear acceleration in the X direction, and vice-versa
+* $\mu_{42} = \mu_{24}$ : added mass moment about the X axis due to linear acceleration in the Y direction, and vice-versa
+* $\mu_{43} = \mu_{34}$ : added mass moment about the X axis due to linear acceleration in the Z direction
 * $\mu_{44}$ : added mass moment about the X axis due to angular acceleration about the X direction
 * $\mu_{45}$ : added mass moment about the X axis due to angular acceleration about the X direction
 * $\mu_{46}$ : added mass moment about the X axis due to angular acceleration about the X direction
-* $\mu_{51} == \mu_{15}$ : added mass moment about the Y axis due to linear acceleration in the X direction, and vice-versa
-* $\mu_{52} == \mu_{25}$ : added mass moment about the Y axis due to linear acceleration in the Y direction, and vice-versa
-* $\mu_{53} == \mu_{35}$ : added mass moment about the Y axis due to linear acceleration in the Z direction, and vice-versa
-* $\mu_{54} == \mu_{45}$ : added mass moment about the Y axis due to angular acceleration about the X direction, and vice-versa
+* $\mu_{51} = \mu_{15}$ : added mass moment about the Y axis due to linear acceleration in the X direction, and vice-versa
+* $\mu_{52} = \mu_{25}$ : added mass moment about the Y axis due to linear acceleration in the Y direction, and vice-versa
+* $\mu_{53} = \mu_{35}$ : added mass moment about the Y axis due to linear acceleration in the Z direction, and vice-versa
+* $\mu_{54} = \mu_{45}$ : added mass moment about the Y axis due to angular acceleration about the X direction, and vice-versa
 * $\mu_{55}$ : added mass moment about the Y axis due to angular acceleration about the X direction
 * $\mu_{56}$ : added mass moment about the Y axis due to angular acceleration about the X direction
-* $\mu_{61} == \mu_{16}$ : added mass moment about the Z axis due to linear acceleration in the X direction, and vice-versa
-* $\mu_{62} == \mu_{26}$ : added mass moment about the Z axis due to linear acceleration in the Y direction, and vice-versa
-* $\mu_{63} == \mu_{36}$ : added mass moment about the Z axis due to linear acceleration in the Z direction, and vice-versa
-* $\mu_{64} == \mu_{46}$ : added mass moment about the Z axis due to angular acceleration about the X direction, and vice-versa
-* $\mu_{65} ==\mu_{56}$ : added mass moment about the Z axis due to angular acceleration about the X direction, and vice-versa
+* $\mu_{61} = \mu_{16}$ : added mass moment about the Z axis due to linear acceleration in the X direction, and vice-versa
+* $\mu_{62} = \mu_{26}$ : added mass moment about the Z axis due to linear acceleration in the Y direction, and vice-versa
+* $\mu_{63} = \mu_{36}$ : added mass moment about the Z axis due to linear acceleration in the Z direction, and vice-versa
+* $\mu_{64} = \mu_{46}$ : added mass moment about the Z axis due to angular acceleration about the X direction, and vice-versa
+* $\mu_{65} =\mu_{56}$ : added mass moment about the Z axis due to angular acceleration about the X direction, and vice-versa
 * $\mu_{66}$ : added mass moment about the Z axis due to angular acceleration about the Z direction
 
 &nbsp;
